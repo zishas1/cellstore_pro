@@ -1,0 +1,78 @@
+[
+ {
+  "doctype": "Custom Field",
+  "dt": "User",
+  "fieldname": "commission_rate",
+  "fieldtype": "Percent",
+  "label": "Default Commission Rate",
+  "insert_after": "email",
+  "default": "5"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "User",
+  "fieldname": "is_sales_rep",
+  "fieldtype": "Check",
+  "label": "Is Sales Representative",
+  "insert_after": "commission_rate"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "User",
+  "fieldname": "is_technician",
+  "fieldtype": "Check",
+  "label": "Is Technician",
+  "insert_after": "is_sales_rep"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Item",
+  "fieldname": "mobile_pro_section",
+  "fieldtype": "Section Break",
+  "label": "Mobile Pro Settings",
+  "insert_after": "description"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Item",
+  "fieldname": "requires_serial_tracking",
+  "fieldtype": "Check",
+  "label": "Requires Serial Number Tracking",
+  "insert_after": "mobile_pro_section"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Item",
+  "fieldname": "default_warranty_period",
+  "fieldtype": "Int",
+  "label": "Default Warranty Period (Days)",
+  "insert_after": "requires_serial_tracking",
+  "default": "365"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Customer",
+  "fieldname": "mobile_pro_info",
+  "fieldtype": "Section Break",
+  "label": "Mobile Pro Information",
+  "insert_after": "primary_address"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Customer",
+  "fieldname": "preferred_contact_method",
+  "fieldtype": "Select",
+  "label": "Preferred Contact Method",
+  "options": "Email\nSMS\nPhone Call",
+  "insert_after": "mobile_pro_info"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Customer",
+  "fieldname": "total_purchases",
+  "fieldtype": "Currency",
+  "label": "Total Purchases",
+  "read_only": 1,
+  "insert_after": "preferred_contact_method"
+ }
+]

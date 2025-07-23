@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-23 17:56:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "repair_id",
+  "customer",
+  "column_break_3",
+  "device_type",
+  "device_brand",
+  "device_model",
+  "section_break_7",
+  "imei_serial",
+  "issue_description",
+  "section_break_10",
+  "technician_assigned",
+  "repair_status",
+  "priority",
+  "column_break_14",
+  "date_received",
+  "estimated_completion",
+  "actual_completion",
+  "section_break_18",
+  "estimated_cost",
+  "actual_cost",
+  "column_break_21",
+  "parts_cost",
+  "labor_cost",
+  "section_break_24",
+  "customer_approval",
+  "warranty_period",
+  "section_break_27",
+  "internal_notes",
+  "customer_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "repair_id",
+   "fieldtype": "Data",
+   "label": "Repair ID",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "device_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Device Type",
+   "options": "Phone\nTablet\nLaptop\nSmartwatch\nOther"
+  },
+  {
+   "fieldname": "device_brand",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Device Brand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "device_model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Device Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Device Information"
+  },
+  {
+   "fieldname": "imei_serial",
+   "fieldtype": "Data",
+   "label": "IMEI/Serial Number"
+  },
+  {
+   "fieldname": "issue_description",
+   "fieldtype": "Text",
+   "label": "Issue Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Repair Management"
+  },
+  {
+   "fieldname": "technician_assigned",
+   "fieldtype": "Link",
+   "label": "Technician Assigned",
+   "options": "User"
+  },
+  {
+   "default": "Received",
+   "fieldname": "repair_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Repair Status",
+   "options": "Received\nDiagnosed\nIn Progress\nParts Ordered\nCompleted\nReady for Pickup\nDelivered\nCancelled"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_received",
+   "fieldtype": "Date",
+   "label": "Date Received"
+  },
+  {
+   "fieldname": "estimated_completion",
+   "fieldtype": "Date",
+   "label": "Estimated Completion"
+  },
+  {
+   "fieldname": "actual_completion",
+   "fieldtype": "Date",
+   "label": "Actual Completion"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Cost Details"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "actual_cost",
+   "fieldtype": "Currency",
+   "label": "Actual Cost"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parts_cost",
+   "fieldtype": "Currency",
+   "label": "Parts Cost"
+  },
+  {
+   "fieldname": "labor_cost",
+   "fieldtype": "Currency",
+   "label": "Labor Cost"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "Approval & Warranty"
+  },
+  {
+   "default": "0",
+   "fieldname": "customer_approval",
+   "fieldtype": "Check",
+   "label": "Customer Approval"
+  },
+  {
+   "default": "30",
+   "fieldname": "warranty_period",
+   "fieldtype": "Int",
+   "label": "Warranty Period (Days)"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "customer_notes",
+   "fieldtype": "Text Editor",
+   "label": "Customer Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2023-07-23 17:56:00.000000",
+ "modified_by": "Administrator",
+ "module": "Mobile Pro",
+ "name": "Device Repair",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Repair Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technician",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

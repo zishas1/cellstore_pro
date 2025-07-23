@@ -1,0 +1,185 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-23 17:56:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_rep",
+  "period_start",
+  "period_end",
+  "column_break_4",
+  "commission_rate",
+  "status",
+  "calculation_date",
+  "section_break_8",
+  "commission_details",
+  "section_break_10",
+  "total_sales",
+  "base_commission",
+  "bonus_commission",
+  "column_break_14",
+  "total_commission",
+  "approved_by",
+  "payment_date",
+  "payment_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "sales_rep",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Representative",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Period Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_end",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Period End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Percent",
+   "label": "Commission Rate",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nCalculated\nApproved\nPaid"
+  },
+  {
+   "fieldname": "calculation_date",
+   "fieldtype": "Date",
+   "label": "Calculation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Commission Details"
+  },
+  {
+   "fieldname": "commission_details",
+   "fieldtype": "Table",
+   "label": "Commission Details",
+   "options": "Commission Detail"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Commission Summary"
+  },
+  {
+   "fieldname": "total_sales",
+   "fieldtype": "Currency",
+   "label": "Total Sales",
+   "read_only": 1
+  },
+  {
+   "fieldname": "base_commission",
+   "fieldtype": "Currency",
+   "label": "Base Commission",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "bonus_commission",
+   "fieldtype": "Currency",
+   "label": "Bonus Commission"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_commission",
+   "fieldtype": "Currency",
+   "label": "Total Commission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2023-07-23 17:56:00.000000",
+ "modified_by": "Administrator",
+ "module": "Mobile Pro",
+ "name": "Commission Tracking",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
